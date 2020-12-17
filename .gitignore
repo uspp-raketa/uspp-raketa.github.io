@@ -1,0 +1,8 @@
+*
+!.gitignore
+!requirements.txt
+!*.ipynb
+!graph.py
+!dictionary_graph.py
+!docs
+!docs/*

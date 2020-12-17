@@ -1,0 +1,198 @@
+/* GRAPH CSS */
+svg {
+    background-color: #FFF;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border: solid 1px #444;
+}
+
+svg:not(.active):not(.ctrl) {
+    cursor: crosshair;
+}
+
+path.link {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4px;
+    cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+    cursor: pointer;
+}
+
+path.link.selected {
+    stroke-dasharray: 10, 2;
+}
+
+path.link.dragline {
+    pointer-events: none;
+}
+
+path.link.hidden {
+    stroke-width: 0;
+}
+
+circle.node {
+    stroke-width: 1.5px;
+    cursor: pointer;
+}
+
+circle.node.reflexive {
+    stroke: #000 !important;
+    stroke-width: 2.5px;
+}
+
+text {
+    font: 12px sans-serif;
+    pointer-events: none;
+}
+
+text.id {
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+/* APP CSS */
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body, button, select {
+    font-size: 20px;
+}
+
+#container {
+    margin: auto;
+    width: 1210px;
+    position: relative;
+}
+
+#help {
+    background: white;
+    opacity: 0.95;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+#close-help {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+#header {
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#graphs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+table {
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+#similarity_table > :first-child > :first-child {
+    border: none;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    width: 70px;
+}
+
+button {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    vertical-align: middle;
+}
+
+.button-green {
+    background: green;
+    color: white;
+}
+
+.button-green:hover {
+    background: darkgreen;
+}
+
+.button-white {
+    background: white;
+    color: black;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.button-white:hover {
+    background: lightgrey;
+}
+
+img {
+    margin: 5px 7px 5px 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    padding-left: 10px;
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    background: #444;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin-top: 80px;
+}
+
+li {
+    margin: 30px;
+}
+
+#delete:hover {
+    background: white;
+}
